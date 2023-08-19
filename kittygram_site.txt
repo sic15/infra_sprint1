@@ -1,0 +1,5 @@
+IP: 62.84.123.59;
+name_taski: https://natalia-practicum.servemp3.com/;
+name_kittygram: https://kittygram-natalia.servemp3.com/;
+login: sic15;
+password: 123;
