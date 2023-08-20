@@ -31,26 +31,15 @@ Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
    10) gunicorn
        
        установка `pip install gunicorn==20.1.0`
+       
        расположение `sudo nano /etc/systemd/system/gunicorn.service `
-       заполните файл
-
-         [Unit] 
-         Description=gunicorn daemon 
-         After=network.target  
-   
-         [Service] 
-         User=yc-user 
-         WorkingDirectory=/home/yc-user/infra_sprint1/backend/ 
-         ExecStart=/home/yc-user/infra_sprint1/backend/venv/bin/gunicorn --bind 0.0.0.0:8888 kittygram_backend.wsgi 
-         
-         [Install] 
-         WantedBy=multi-user.target  
-
-
+       
+       скопируйте файл конфигураций `sudo cp -f infra/default /etc/nginx/sites-enabled/`
+       
        запуск `sudo systemctl start gunicorn`
        
        автозапуск `sudo systemctl enable gunicorn`
-   11) Nginx
+   12) Nginx
        установка `sudo apt install nginx -y `
        
        запуск `sudo systemctl start nginx`
