@@ -1,16 +1,19 @@
 # infra_sprint1
 
+## Описание проекта ##
+
 Социальная сеть с возможностью выкладывать фото котиков и описывать их достижения.
 
 ---
+## Стек ##
 
-Стек: Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
+Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
 
 ---
 
-Запуcк проекта:
+## Запуcк проекта: ##
    1) скопировать проект с github  `git clone git@github.com:Your_account/infra_sptint1.git`
-   2) В корневой директории создайте фпйл .env
+   2) В директории `/infra_sprint1`создайте файл .env
       Шаблон заполнения .env:
          SECRET_KEY
          DEBUG
@@ -25,22 +28,24 @@
       ```curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\ sudo apt-get install -y nodejs```
       в директории ```<ваш проект>/frontend/``` выполнитe ```npm i```
    10) запуск gunicorn
-      ```pip install gunicorn==20.1.0```
+       ```
+       pip install gunicorn==20.1.0
+       sudo systemctl start gunicorn
+       sudo systemctl enable gunicorn
+       ```
    11) запуск Nginx
-       
-      ```sudo apt install nginx -y```
-      
-      `python sudo ufw allow 'Nginx Full'`
-      
-      ```python sudo ufw allow OpenSSH```
-      
-      ```python sudo ufw enable```
-   13) сбор статики
+       ```
+       sudo apt install nginx -y 
+       python sudo ufw allow 'Nginx Full'
+       python sudo ufw allow OpenSSH
+       python sudo ufw enable
+       ```
+   12) сбор статики
       в директории ```<имя_проекта>/frontend/``` выполнить ```npm run build```
       ```sudo systemctl reload nginx```
 
 ---
-
+## Об авторе ##
 Автор проекта Яндекс.Практикум. 
 
 Сборка: студентка Яндекс.Практикума Наталья Арлазарова
