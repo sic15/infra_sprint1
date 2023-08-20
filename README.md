@@ -14,7 +14,7 @@ Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
 ## Запуcк проекта: 
 
    1) скопировать проект с github  `git clone git@github.com:Your_account/infra_sptint1.git`
-   2) В директории `/infra_sprint1`создайте файл .env
+   2) В директории `/infra_sprint1/backend/kittygram_backend`создайте файл .env
       Шаблон заполнения .env:
          SECRET_KEY
          DEBUG
