@@ -1,17 +1,18 @@
 # infra_sprint1
 
-## Описание проекта ##
+## Описание проекта 
 
 Социальная сеть с возможностью выкладывать фото котиков и описывать их достижения.
 
 ---
-## Стек ##
+## Стек 
 
 Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
 
 ---
 
-## Запуcк проекта: ##
+## Запуcк проекта: 
+
    1) скопировать проект с github  `git clone git@github.com:Your_account/infra_sptint1.git`
    2) В директории `/infra_sprint1`создайте файл .env
       Шаблон заполнения .env:
@@ -45,7 +46,7 @@ Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
       ```sudo systemctl reload nginx```
 
 ---
-## Об авторе ##
+## Об авторе 
 Автор проекта Яндекс.Практикум. 
 
 Сборка: студентка Яндекс.Практикума Наталья Арлазарова
