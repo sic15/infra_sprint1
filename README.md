@@ -11,8 +11,7 @@ ALLOWED_HOSTS
 
 Запуcк проекта:
 1) ```python
-   git clone git@github.com:Your_account/infra_sptint1.git
-   ``` # скопировать проект с github
+   git clone git@github.com:Your_account/infra_sptint1.git``` # скопировать проект с github
 1) sudo apt install python3-pip python3-venv -y # Установите менеджер пакетов и утилиту виртуальной среды
 2) python3 -m venv venv # создайте виртуальное оеружение
 3) source venv/bin/activate # активируйте виртуальное окружение
