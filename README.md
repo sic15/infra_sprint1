@@ -34,10 +34,7 @@ Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
    11) Nginx
        установка `sudo apt install nginx -y `
        запуск `sudo systemctl start nginx`
-       открытие портов `python sudo ufw allow 'Nginx Full'`
-       `python sudo ufw allow OpenSSH`
        скопируйте файл конфигураций `sudo cp -f infra/default /etc/nginx/sites-enabled/`
-       запуск файрвол `python sudo ufw enable`
       
    12) сбор статики
       в директории `<имя_проекта>/frontend/` выполнить `npm run build`
