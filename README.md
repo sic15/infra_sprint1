@@ -28,19 +28,39 @@ Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
    9) запуск frontend
       ```curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\ sudo apt-get install -y nodejs```
       в директории ```<ваш проект>/frontend/``` выполнитe ```npm i```
-   10) запуск gunicorn
-       ```
-       pip install gunicorn==20.1.0
-       sudo systemctl start gunicorn
-       sudo systemctl enable gunicorn
-       ```
-   11) запуск Nginx
-       ```
-       sudo apt install nginx -y 
-       python sudo ufw allow 'Nginx Full'
-       python sudo ufw allow OpenSSH
-       python sudo ufw enable
-       ```
+   10) gunicorn
+       
+       установка `pip install gunicorn==20.1.0`
+       расположение `sudo nano /etc/systemd/system/gunicorn.service `
+       заполните файл
+
+         [Unit] 
+         Description=gunicorn daemon 
+         After=network.target  
+   
+         [Service] 
+         User=yc-user 
+         WorkingDirectory=/home/yc-user/infra_sprint1/backend/ 
+         ExecStart=/home/yc-user/infra_sprint1/backend/venv/bin/gunicorn --bind 0.0.0.0:8888 kittygram_backend.wsgi 
+         
+         [Install] 
+         WantedBy=multi-user.target  
+
+
+       запуск `sudo systemctl start gunicorn`
+       
+       автозапуск `sudo systemctl enable gunicorn`
+   11) Nginx
+       установка `sudo apt install nginx -y `
+       
+       запуск `sudo systemctl start nginx`
+       
+       открытие портов `python sudo ufw allow 'Nginx Full'`
+       
+      `python sudo ufw allow OpenSSH`
+       
+       запуск файрвол `python sudo ufw enable`
+      
    12) сбор статики
       в директории ```<имя_проекта>/frontend/``` выполнить ```npm run build```
       ```sudo systemctl reload nginx```
