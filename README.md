@@ -27,19 +27,19 @@ Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
       в директории `infra_sprint1/frontend/` выполнитe `npm i`
       
    10) gunicorn
-       расположение `sudo nano /etc/systemd/system/gunicorn.service `
+       скопируйте файла `sudo cp -f infra/gunicorn.service /etc/systemd/system/`
        запуск `sudo systemctl start gunicorn`
        автозапуск `sudo systemctl enable gunicorn`
        
-   11) Nginx
+   12) Nginx
        установка `sudo apt install nginx -y `
        запуск `sudo systemctl start nginx`
        скопируйте файл конфигураций `sudo cp -f infra/default /etc/nginx/sites-enabled/`
       
-   12) сбор статики
+   13) сбор статики
       в директории `<имя_проекта>/frontend/` выполнить `npm run build`
 
-   13) настройка Nginx
+   14) настройка Nginx
        копируем статику в другую папку `sudo cp -r /home/yc-user/infra_sptint1/frontend/build/. /var/www/kittygram/`
        перезапускаем nginx `sudo systemctl reload nginx`
 
