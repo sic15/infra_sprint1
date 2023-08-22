@@ -27,7 +27,7 @@ Python 3.9, Docker, Nginx, PostgreSQL, Gunicorn, GitHub Actions
       в директории `infra_sprint1/frontend/` выполнитe `npm i`
       
    10) gunicorn
-       скопируйте файл `sudo cp -f infra/gunicorn.service /etc/systemd/system/`
+       скопируйте файл `sudo cp -f infra/gunicorn_kittygram.service /etc/systemd/system/`
        запуск `sudo systemctl start gunicorn`
        автозапуск `sudo systemctl enable gunicorn`
        
